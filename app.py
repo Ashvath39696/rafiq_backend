@@ -29,7 +29,7 @@ chain_obj = Chain()
 class QueryRequest(BaseModel):
     session_id: str
     question: str
-    knowledge_base: str  # "uploaded", "existing", or "none"
+    knowledge_base: str = "existing"# "uploaded", "existing", or "none"
 
 
 @app.on_event("startup")
